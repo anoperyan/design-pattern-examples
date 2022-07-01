@@ -6,7 +6,18 @@
 
 ### 简单工厂模式
 
-#### 分类：创建型
+#### 分类：
+
+创建型
+
+#### 简述：
+
+在超类中提供了一个创建对象的接口，但是允许子类修改将要被创建的对象的类型
+
+#### 经典应用
+
+- Spring Ioc中的BeanFactory，它使用同一套流程来创建大量的额对象，使用工厂方法模式，使得任何一个对象可以被一个接口获取。
+- ThreadExecutorPool中的ThreadFactory接口，提供了一个newThread方法来创建一个线程，ThreadPoolExecutor利用该对象来创建类型一样但是参数不同的Thread对象。
 
 ####
 
@@ -52,6 +63,10 @@
 - 适配器模式：在Android开发中，列表，Banner均需使用适配器将接口数据适配为列表接受的View数据。
 - 状态模式：在订单系统中，我们将订单的额状态先抽象为一个有限状态机，定义好他的行为，状态，输入等，然后再按照模型编写代码。 比如像ETCD这种分布式KV数据库，底层使用了基于复制状态机的Raft一致性协议来实现了强一致性。
 
+### 模板方法模式和策略模式有何异同？
+
 ## 参考文档
 
-[Design Pattern - 我的推荐](https://refactoring.guru/design-patterns/factory-method)
+- [Design Pattern - 我的推荐](https://refactoring.guru/design-patterns/factory-method)
+- [设计模式 - 廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528)
+- [重学Java设计模式 - 小博哥](https://github.com/fuzhengwei/itstack-demo-design)

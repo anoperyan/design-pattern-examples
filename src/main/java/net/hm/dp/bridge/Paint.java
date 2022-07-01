@@ -1,4 +1,4 @@
-package net.hm.dp.abstractfactory;
+package net.hm.dp.bridge;
 
 /**
  * @author Yan Jiahong
